@@ -30,6 +30,30 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/mixin/colors" as colors;
+.modal-animation-enter-from,
+.modal-animation-leave-to {
+  opacity: 0;
+}
+
+.modal-animation-enter-active,
+.modal-animation-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-inner-animation-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.modal-inner-animation-leave-to {
+  transform: scale(0.8);
+}
+
+.modal-inner-animation-enter-active {
+  transition: all 0.3s ease-in-out 0.15s;
+}
+.modal-inner-animation-leave-active {
+  transition: all 0.3s ease-in-out;
+}
 
 .modal {
   height: 100vh;
